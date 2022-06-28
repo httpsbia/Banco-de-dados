@@ -96,3 +96,27 @@ SELECT*
  ORDER BY Limite 
 
 --17- Ordene decrescentemente os nomes das bandeiras.
+ 
+SELECT*
+  FROM Bandeiras
+  ORDER BY idBandeira DESC
+
+--18- Mostre vinte por cento dos registros da tabela de clientes.
+
+SELECT TOP 20 *
+ FROM Clientes
+
+--19- Mostrar os tipos de cartões que precisam de renda mínima maior ou igual a R$2.000,00
+-- e é internacional ordenado pelo valor da anuidade.
+ 
+SELECT*
+ FROM tipoCartao
+ WHERE rendaMinima >= 2000 AND Internacional = 1
+
+--20 Mostrar os dez primeiros cartões dos clientes que estão bloqueados.
+
+SELECT TOP 10*
+  FROM Cliente_Cartao
+  WHERE Bloqueado = 1
+  ORDER BY Numero ASC
+   
